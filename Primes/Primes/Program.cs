@@ -18,7 +18,10 @@ do
 
     var primeList = PrimeSearcher.FindPrimes(primeSearchLimit);
 
+    Console.WriteLine("Primes:\n1\n2");
     Console.WriteLine(primeList.Select(x => x.ToString()).Aggregate((s1, s2) => $"{s1}\n{s2}"));
+
+    Console.WriteLine($"Total number of primes: {primeList.Count + 2}");
 
     Console.WriteLine("New search? (Y/N)");
 
