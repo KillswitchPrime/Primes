@@ -7,6 +7,8 @@ do
     var wasValidInput = false;
     var primeSearchLimit = 0;
 
+    Console.WriteLine("Enter search limit for finding primes: ");
+
     while (!wasValidInput)
     {
         var input = Console.ReadLine();
