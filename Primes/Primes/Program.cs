@@ -14,15 +14,17 @@ do
         var input = Console.ReadLine();
         wasValidInput = int.TryParse(input, out var parsedPrimeSearchLimit);
         primeSearchLimit = parsedPrimeSearchLimit;
+        Console.WriteLine();
     }
 
     var primeList = PrimeSearcher.FindPrimes(primeSearchLimit);
 
-    Console.WriteLine("Primes:\n1\n2");
-    Console.WriteLine(primeList.Select(x => x.ToString()).Aggregate((s1, s2) => $"{s1}\n{s2}"));
+    Console.WriteLine("Showing 10 largest primes:");
+    Console.WriteLine(primeList.Skip(primeList.Count - 10).Select(x => x.ToString()).Aggregate((s1, s2) => $"{s1}\n{s2}"));
+    Console.WriteLine();
 
-    Console.WriteLine($"Total number of primes: {primeList.Count + 2}");
-
+    Console.WriteLine($"Total number of primes: {primeList.Count + 2}\n");
+    
     Console.WriteLine("New search? (Y/N)");
 
     var continueInput = Console.ReadLine();

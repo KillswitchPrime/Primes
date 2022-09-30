@@ -16,6 +16,8 @@ namespace Primes
 
                 for(var index = 0; index < primes.Count; index++)
                 {
+                    if (primes[index] > Math.Sqrt(i)) break;
+
                     if(i % primes[index] == 0)
                     {
                         isPrime = false;
