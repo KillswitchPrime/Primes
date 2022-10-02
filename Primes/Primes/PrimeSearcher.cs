@@ -21,6 +21,7 @@ namespace Primes
                     if(i % primes[index] == 0)
                     {
                         isPrime = false;
+                        break;
                     }
                 }
 

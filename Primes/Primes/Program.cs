@@ -24,11 +24,5 @@ do
     Console.WriteLine();
 
     Console.WriteLine($"Total number of primes: {primeList.Count + 2}\n");
-    
-    Console.WriteLine("New search? (Y/N)");
-
-    var continueInput = Console.ReadLine();
-
-    if(continueInput?.ToUpper() != "Y") isFinished = true;
 
 } while (!isFinished);
