@@ -23,6 +23,6 @@ do
     Console.WriteLine(primeList.Skip(primeList.Count - 10).Select(x => x.ToString()).Aggregate((s1, s2) => $"{s1}\n{s2}"));
     Console.WriteLine();
 
-    Console.WriteLine($"Total number of primes: {primeList.Count + 2}\n");
+    Console.WriteLine($"Total number of primes: {primeList.Count + 1}\n");
 
 } while (!isFinished);

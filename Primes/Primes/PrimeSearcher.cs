@@ -14,9 +14,9 @@ namespace Primes
             {
                 var isPrime = true; 
 
-                for(var index = 0; index < primes.Count && isPrime && primes[index] < Math.Sqrt(primeCandidate); index++)
+                for(var index = 0; index < primes.Count && isPrime && primes[index] <= Math.Sqrt(primeCandidate); index++)
                 {
-                    isPrime = primeCandidate % primes[index] !== 0;
+                    isPrime = primeCandidate % primes[index] != 0;
                 }
 
                 if (isPrime) primes.Add(primeCandidate);
