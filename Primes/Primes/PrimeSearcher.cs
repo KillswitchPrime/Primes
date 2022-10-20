@@ -10,13 +10,13 @@ namespace Primes
 
             var primes = new List<int> { 3, 5, 7, 11, 13, 17};
 
-            for(var i = 19; i < primeSearchLimit; i += 2)
+            for(var primeCandidate = 19; primeCandidate < primeSearchLimit; primeCandidate += 2)
             {
                 var isPrime = true; 
 
-                for(var index = 0; index < primes.Count && isPrime && primes[index] < Math.Sqrt(i); index++)
+                for(var index = 0; index < primes.Count && isPrime && primes[index] < Math.Sqrt(primeCandidate); index++)
                 {
-                    if(i % primes[index] == 0)
+                    if(primeCandidate % primes[index] == 0)
                     {
                         isPrime = false;
                     }
@@ -24,7 +24,7 @@ namespace Primes
 
                 if (isPrime)
                 {
-                    primes.Add(i);
+                    primes.Add(primeCandidate);
                 }
             }
 
