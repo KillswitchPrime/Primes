@@ -14,14 +14,11 @@ namespace Primes
             {
                 var isPrime = true; 
 
-                for(var index = 0; index < primes.Count; index++)
+                for(var index = 0; index < primes.Count && isPrime && primes[index] < Math.Sqrt(i); index++)
                 {
-                    if (primes[index] > Math.Sqrt(i)) break;
-
                     if(i % primes[index] == 0)
                     {
                         isPrime = false;
-                        break;
                     }
                 }
 
