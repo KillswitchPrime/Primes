@@ -16,16 +16,10 @@ namespace Primes
 
                 for(var index = 0; index < primes.Count && isPrime && primes[index] < Math.Sqrt(primeCandidate); index++)
                 {
-                    if(primeCandidate % primes[index] == 0)
-                    {
-                        isPrime = false;
-                    }
+                    isPrime = primeCandidate % primes[index] !== 0;
                 }
 
-                if (isPrime)
-                {
-                    primes.Add(primeCandidate);
-                }
+                if (isPrime) primes.Add(primeCandidate);
             }
 
             return primes;
